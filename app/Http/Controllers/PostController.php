@@ -54,6 +54,12 @@ class PostController extends Controller {
 		$post->fill($edit)->save();
 		return redirect('/posts/' . $post->id);
 	}
+	
+	//記事の削除をするよ
+	public function delete(Post $post) {
+		$post->delete();
+		return redirect('/');
+	}
 }
 	
 ?>
