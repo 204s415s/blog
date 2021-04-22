@@ -16,7 +16,7 @@ class PostController extends Controller {
 	*/
 	//記事一覧画面
 	public function index(Post $post) {
-	    return view('index')->with(['posts' => $post->getPaginateByLimit()]);
+		return view('index')->with(['posts' => $post->getPaginateByLimit()]);
 	}
 	
 	/**

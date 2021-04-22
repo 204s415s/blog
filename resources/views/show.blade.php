@@ -15,7 +15,7 @@
                 @csrf
                 @method('DELETE')
                 <input type="submit" style="display:none" />
-                <p class="delete">[ <span onclick="return deletePost(this);">delete</span> ]</p>
+                <p class="delete">[ <span onclick="deletePost()" >delete</span> ]</p>
             </form>
             <div class="post">
                 <h2 class="title">{{ $post->title }}</h2>
@@ -24,7 +24,7 @@
             </div>
             <div class="back">[ <a href="/">back</a> ]</div>
             <script>
-                function deletePost(e) {
+                function deletePost() {
                     'use strict';
                     if (confirm('本当に削除しますか？')) {
                         document.getElementById('form_delete').submit();
