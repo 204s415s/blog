@@ -6,6 +6,7 @@
         <title>Blog</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link href="{{ asset('/css/sample.css') }}" rel="stylesheet" type="text/css">
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     
