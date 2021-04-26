@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title', 50);
             $table->string('body', 200);
             $table->timestamps();
-            $table->dateTime('deleted_at', 0);
+            $table->dateTime('deleted_at', 0)->nullable();
         });
     }
 
