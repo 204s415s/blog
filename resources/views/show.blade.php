@@ -15,7 +15,7 @@
                 @csrf
                 @method('DELETE')
                 <input type="submit" style="display:none" />
-                <p class="delete">[ <span onclick="deletePost()" >delete</span> ]</p>
+                <p class="delete">[ <span onclick="deletePost()" >消す</span> ]</p>
             </form>
             <div class="post">
                 <h2 class="title">{{ $post->title }}</h2>

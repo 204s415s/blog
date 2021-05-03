@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Post;
 
 class PostTableSeeder extends Seeder
 {
@@ -11,12 +12,15 @@ class PostTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('posts'->insert([
-            [ 'title' => 'test1',
-              'body' => 'body1' ]
-            ,
-            [ 'title' => 'title2',
-              'body' => 'body2' ],
-            ]));
+        DB::table('posts')->insert([
+            [
+                'title' => 'test1',
+                'body' => 'body1'
+              ],
+            [
+                'title' => 'title2',
+                'body' => 'body2' 
+                ],
+            ]);
     }
 }
