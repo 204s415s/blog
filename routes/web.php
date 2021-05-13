@@ -11,20 +11,24 @@
 |
 */
 
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
-
+*/
 
 Route::get('/', 'PostController@index');
 Route::get('/posts', 'PostController@index');
 Route::get('/posts/create', 'PostController@create'); 
+Route::get('/posts/{user}/favorites', 'PostController@favorite');
 Route::get('/posts/{post}', 'PostController@show');
 Route::get('/posts/{post}/edit', 'PostController@edit');
 Route::post('/posts', 'PostController@store');
 Route::put('/posts/{post}', 'PostController@update');
 Route::delete('/posts/{post}', 'PostController@delete');
 Auth::routes();
+
+Route::get('/posts/favs/{id}', 'FavsController@favs')->name('posts.favs');
+Route::get('/posts/unfavs/{id}', 'FavsController@unfavs')->name('posts.unfavs');
 
 Route::get('/home', 'HomeController@index')->name('home');

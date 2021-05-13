@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 use App\Post;
 
 class PostTableSeeder extends Seeder
@@ -12,15 +13,19 @@ class PostTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('posts')->insert([
-            [
-                'title' => 'test1',
-                'body' => 'body1'
-              ],
-            [
-                'title' => 'title2',
-                'body' => 'body2' 
-                ],
-            ]);
+        
+        /*    
+            $faker = Faker::create();
+            
+            for ($i = 0; $i < 20; $i++) {
+                Post::create([
+                    'title' => $faker->title,
+                    'body' => $faker->body,
+                    'user_id' => $faker->user_id
+                    ]);
+            }
+        */
+        
+        factory(\App\Post::class,20)->create();
     }
 }
